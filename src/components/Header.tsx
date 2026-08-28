@@ -5,6 +5,7 @@ import {
   Braces,
   Command,
   FileText,
+  GitCompareArrows,
   Image,
   Moon,
   Search,
@@ -12,6 +13,7 @@ import {
   Sun,
   Sunset,
   Ticket,
+  WandSparkles,
   Wrench,
 } from 'lucide-react'
 import About from './About.tsx'
@@ -29,7 +31,6 @@ const categories = [
   { label: 'PDF', icon: FileText, items: ['PDF tool 1', 'PDF tool 2', 'PDF tool 3'] },
   { label: 'Image', icon: Image, items: ['Image tool 1', 'Image tool 2', 'Image tool 3'] },
 ]
-
 export default function Header() {
   const [openCategory, setOpenCategory] = useState<string | null>(null)
   const [isAboutOpen, setIsAboutOpen] = useState(false)
@@ -74,6 +75,18 @@ export default function Header() {
               }
             </div>
           ))}
+          <div className="nav-menu" onMouseEnter={() => setOpenCategory('Miscellaneous')} onMouseLeave={() => setOpenCategory(null)}>
+            <button className="nav-link" type="button" onClick={() => setOpenCategory(openCategory === 'Miscellaneous' ? null : 'Miscellaneous')} aria-expanded={openCategory === 'Miscellaneous'}>
+              <WandSparkles size={15} aria-hidden="true" />Miscellaneous<ChevronDown size={14} aria-hidden="true" />
+            </button>
+            {openCategory === 'Miscellaneous' && <div className="dropdown-menu">
+              <a href="#transform-json" onClick={() => setOpenCategory(null)}>JSON Transform</a>
+              <a href="#transform-text" onClick={() => setOpenCategory(null)}>Text Transform</a>
+            </div>}
+          </div>
+          <a className="nav-link nav-direct-link" href="#compare" onClick={() => setOpenCategory(null)}>
+            <GitCompareArrows size={15} aria-hidden="true" />Compare
+          </a>
         </nav>
 
         <div className="header-actions">
