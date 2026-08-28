@@ -14,6 +14,8 @@ import {
   Ticket,
   Wrench,
 } from 'lucide-react'
+import About from './About.tsx'
+import BuyMeCoffee from './BuyMeCoffee.tsx'
 
 const themes = ['theme-light', 'theme-blue', 'theme-black'] as const
 const themeLabels = {
@@ -30,6 +32,8 @@ const categories = [
 
 export default function Header() {
   const [openCategory, setOpenCategory] = useState<string | null>(null)
+  const [isAboutOpen, setIsAboutOpen] = useState(false)
+  const [isCoffeeOpen, setIsCoffeeOpen] = useState(false)
   const navigationRef = useRef<HTMLElement>(null)
   const [theme, setTheme] = useState<typeof themes[number]>(
     (document.documentElement.className as typeof themes[number]) || 'theme-light',
@@ -78,8 +82,8 @@ export default function Header() {
             <span>Search tools...</span>
             <kbd><Command size={11} aria-hidden="true" />K</kbd>
           </button>
-          <button className="coffee-button" type="button"><Ticket size={14} aria-hidden="true" /> Buy coffee</button>
-          <button className="header-button" type="button">About</button>
+          <button className="coffee-button" type="button" onClick={() => setIsCoffeeOpen(true)} aria-haspopup="dialog" aria-expanded={isCoffeeOpen}><Ticket size={14} aria-hidden="true" /> Buy coffee</button>
+          <button className="header-button" type="button" onClick={() => setIsAboutOpen(true)}>About</button>
           <button className="icon-button" type="button" aria-label="Settings"><Settings size={17} /></button>
           <button className="icon-button theme-toggle" type="button" onClick={cycleTheme} aria-label={`Switch to ${themeLabels[themes[(themes.indexOf(theme) + 1) % themes.length]]}`} title={themeLabels[theme]}>
             {theme === 'theme-light' && <Sun size={17} />}
@@ -88,6 +92,8 @@ export default function Header() {
           </button>
         </div>
       </div>
+      <About isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
+      <BuyMeCoffee isOpen={isCoffeeOpen} onClose={() => setIsCoffeeOpen(false)} />
     </header>
   )
 }
