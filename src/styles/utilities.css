@@ -1,0 +1,13 @@
+/* Theme Adaptive Helper Classes */
+.theme-bg-app { background-color: var(--bg-app); }
+.theme-bg-surface { background-color: var(--bg-surface); }
+.theme-bg-elevated { background-color: var(--bg-surface-elevated); }
+.theme-bg-editor { background-color: var(--bg-editor); }
+.theme-border { border-color: var(--border-subtle); }
+.theme-border-strong { border-color: var(--border-strong); }
+.theme-text-primary { color: var(--text-primary); }
+.theme-text-secondary { color: var(--text-secondary); }
+.theme-text-muted { color: var(--text-muted); }
+.theme-accent { color: var(--accent-primary); }
+.theme-accent-bg { background-color: var(--accent-primary); }
+.theme-accent-light { color: var(--accent-light); }

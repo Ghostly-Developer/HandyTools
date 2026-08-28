@@ -1,0 +1,93 @@
+:root,
+.theme-blue {
+  color-scheme: dark;
+  --bg-app: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-elevated: #111827;
+  --bg-editor: #0b1120;
+  --border-subtle: #334155;
+  --border-strong: #475569;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-primary: #3b82f6;
+  --accent-light: #adc6ff;
+  --accent-hover: #2563eb;
+  --diff-add-bg: rgb(34 197 94 / 18%);
+  --diff-add-inline: rgb(34 197 94 / 35%);
+  --diff-add-text: #4ade80;
+  --diff-rem-bg: rgb(239 68 68 / 18%);
+  --diff-rem-inline: rgb(239 68 68 / 35%);
+  --diff-rem-text: #f87171;
+  --scrollbar-track: #0b0e15;
+  --scrollbar-thumb: #334155;
+  --accent: var(--accent-primary);
+  --coffee-button-text: #ffffff;
+  --accent-bg: var(--bg-surface);
+  --accent-border: var(--accent-hover);
+  --border: var(--border-subtle);
+  --text-h: var(--text-primary);
+  --social-bg: var(--bg-surface);
+  --shadow: 0 8px 24px rgb(0 0 0 / 25%);
+  --shadow-modal: 0 22px 60px rgb(0 0 0 / 45%);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --transition-fast: 150ms ease;
+  --brand-mark-color: #c084fc;
+  --brand-mark-background: #312e81;
+}
+
+.theme-black {
+  color-scheme: dark;
+  --bg-app: #121214;
+  --bg-surface: #1c1c20;
+  --bg-surface-elevated: #161619;
+  --bg-editor: #0c0c0e;
+  --border-subtle: #27272a;
+  --border-strong: #3f3f46;
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-primary: #e2e8f0;
+  --accent-light: #ffffff;
+  --accent-hover: #cbd5e1;
+  --diff-add-bg: rgb(34 197 94 / 18%);
+  --diff-add-inline: rgb(34 197 94 / 38%);
+  --diff-add-text: #4ade80;
+  --diff-rem-bg: rgb(239 68 68 / 18%);
+  --diff-rem-inline: rgb(239 68 68 / 38%);
+  --diff-rem-text: #f87171;
+  --scrollbar-track: #0c0c0e;
+  --scrollbar-thumb: #27272a;
+  --brand-mark-color: #e9d5ff;
+  --brand-mark-background: #3b0764;
+  --coffee-button-text: #121214;
+}
+
+.theme-light {
+  color-scheme: light;
+  --bg-app: #eff1f5;
+  --bg-surface: #e6e9ef;
+  --bg-surface-elevated: #dce0e8;
+  --bg-editor: #ffffff;
+  --border-subtle: #ccd0da;
+  --border-strong: #bcc0cc;
+  --text-primary: #4c4f69;
+  --text-secondary: #5c5f77;
+  --text-muted: #8c8fa1;
+  --accent-primary: #1e66f5;
+  --accent-light: #8839ef;
+  --accent-hover: #04a5e5;
+  --diff-add-bg: rgb(64 160 43 / 18%);
+  --diff-add-inline: rgb(64 160 43 / 35%);
+  --diff-add-text: #40a02b;
+  --diff-rem-bg: rgb(210 15 57 / 18%);
+  --diff-rem-inline: rgb(210 15 57 / 35%);
+  --diff-rem-text: #d20f39;
+  --scrollbar-track: #eff1f5;
+  --scrollbar-thumb: #ccd0da;
+  --brand-mark-color: #7c3aed;
+  --brand-mark-background: #ede9fe;
+  --coffee-button-text: #ffffff;
+}
